@@ -1,11 +1,11 @@
-# 	EM_Ajaxproducts
-#
-#	Support Version: 1.6 , 1.7 , 1.8
-#	Day Update : Feb 7 2017
-#	------------------------------------
-#	How to Install
-#
-#	1. Extract the zip file to EM_Ajaxproducts folder. 
-#	2. Upload all files and sub-directories inside the main folder EM_Ajaxproducts on your magento root folder. Select overwrite all if asked.
-#	3. Login to your Magento backend, disable all magento cache, flush cache and refresh your website again.
-#	4. EM_Ajaxproducts magento extension will be installed automatically once your website is reloaded.
+EM_Ajaxproducts
+
+Support Version: 1.6 , 1.7 , 1.8
+Day Update : Feb 7 2017
+------------------------------------
+How to Install
+
+1. Extract the zip file to EM_Ajaxproducts folder. 
+2. Upload all files and sub-directories inside the main folder EM_Ajaxproducts on your magento root folder. Select overwrite all if asked.
+3. Login to your Magento backend, disable all magento cache, flush cache and refresh your website again.
+4. EM_Ajaxproducts magento extension will be installed automatically once your website is reloaded.
