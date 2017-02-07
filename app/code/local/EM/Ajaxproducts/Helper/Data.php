@@ -1,0 +1,5 @@
+<?php
+class EM_Ajaxproducts_Helper_Data extends Mage_Core_Helper_Abstract
+{
+
+}

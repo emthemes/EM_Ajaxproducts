@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<widgets>
+    <ajaxproducts_list type="ajaxproducts/list" translate="name description" module="ajaxproducts" >
+        <name>EM Ajax Products List</name>
+        <description type="desc">EM Ajax Products in Multi Categories</description>
+        <parameters>        
+		<new_category translate="label">            
+                <label>Choose Categories</label>
+                <visible>1</visible>
+                <description>You can choose many categories. Leave empty for selecting all categories</description>
+                <type>multiselect</type>
+                <source_model>ajaxproducts/categorytree</source_model>
+
+            </new_category>
+
+            <limit_count>
+                <label>Limit Count</label>
+                <description>The numbers of product will be show</description>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <value>10</value>
+            </limit_count>
+
+			<column_count>
+                <label>Column Count</label>
+                <description>The numbers of products per row. if not specified or 0, ul will hold all li.item</description>
+                <visible>1</visible>
+                <required>0</required>
+                <type>text</type>
+            </column_count>
+
+			<use_click translate="label">
+                <label>Click or scroll to load products</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+				<values>
+                    <scroll translate="label">
+                        <value>0</value>
+                        <label>Scroll</label>
+                    </scroll>
+					<click translate="label">
+                        <value>1</value>
+                        <label>Click</label>
+                    </click>
+                </values>
+            </use_click>
+
+            <order_by>
+                <label>Order by</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <order_by_1 translate="label">
+                        <value>name asc</value>
+                        <label>Name ASC</label>
+                    </order_by_1>
+					<order_by_11 translate="label">
+                        <value>name desc</value>
+                        <label>Name DESC</label>
+                    </order_by_11>
+                    <order_by_2 translate="label">
+                        <value>position asc</value>
+                        <label>Position ASC</label>
+                    </order_by_2>
+                    <order_by_21 translate="label">
+                        <value>position desc</value>
+                        <label>Position DESC</label>
+                    </order_by_21>					
+                    <order_by_3 translate="label">
+                        <value>price asc</value>
+                        <label>Price ASC</label>
+                    </order_by_3>
+                    <order_by_31 translate="label">
+                        <value>price desc</value>
+                        <label>Price DESC</label>
+                    </order_by_31>
+                </values>
+            </order_by>
+
+            <custom_class>
+                <label>Custom Wrapper Class</label>
+    			<visible>1</visible>
+                <required>0</required>
+    			<type>text</type>
+            </custom_class>
+
+			<frontend_title>
+				<label>Frontend Title</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>text</type>
+				<sort_order>6</sort_order>
+			</frontend_title>
+
+            <frontend_description>
+				<label>Frontend Description</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>text</type>
+			</frontend_description>
+
+			<item_width>
+                <label>Item Width</label>
+				<description>unit: px</description>
+				<visible>1</visible>
+                <required>0</required>
+				<type>text</type>
+				<value></value>
+            </item_width>
+
+            <item_height>
+                <label>Item Height</label>
+				<description>unit: px</description>
+				<visible>1</visible>
+                <required>0</required>
+				<type>text</type>
+				<value></value>
+            </item_height>	
+
+			<item_spacing>
+                <label>Item Spacing</label>
+				<description>Spacing between 2 items. unit: px</description>
+				<visible>1</visible>
+                <required>0</required>
+				<type>text</type>
+				<value></value>
+            </item_spacing>
+
+			<item_class>
+                <label>Item Class Custom</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>text</type>
+				<value></value>
+            </item_class>
+
+            <thumbnail_width>
+                <label>Thumbnail Width</label>
+				<visible>1</visible>
+                <required>1</required>
+				<type>text</type>
+				<value>150</value>
+            </thumbnail_width>
+
+            <thumbnail_height>
+                <label>Thumbnail Height</label>
+				<visible>1</visible>
+                <required>1</required>
+				<type>text</type>
+				<value>150</value>
+            </thumbnail_height>
+
+            <show_product_name>
+                <label>Show Product's Name</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+					<no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                </values>
+            </show_product_name>
+
+            <show_thumbnail>
+                <label>Show Thumbnail</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+                    <no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                </values>
+            </show_thumbnail>
+
+            <alt_img>
+                <label>Alternative image</label>
+                <description>Image should be displayed when hover to the thumbnail image.</description>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <source_model>ajaxproducts/config_altimg</source_model>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+            </alt_img>
+
+            <show_description>
+                <label>Show Product's Description</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                    <yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+                </values>
+            </show_description>
+
+            <show_price>
+                <label>Show Product's Price</label>	
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+                    <no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                </values>
+            </show_price>
+
+            <show_reviews>
+                <label>Show Product's Reviews</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                    <yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+                </values>
+            </show_reviews>
+
+            <show_addtocart>
+                <label>Show Add to cart button</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+					<no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                </values>
+            </show_addtocart>
+ 
+            <show_addto>
+                <label>Show Add to wishlist-compare button</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+					<no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+                    <yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+                </values>
+            </show_addto>
+
+			<show_label>
+                <label>Show EM Label</label>
+				<visible>1</visible>
+                <required>0</required>
+				<type>select</type>
+				<values>
+                    <no translate="label">
+                        <value>0</value>
+                        <label>No</label>
+                    </no>
+					<yes translate="label">
+                        <value>1</value>
+                        <label>Yes</label>
+                    </yes>
+                </values>
+            </show_label>
+
+            <choose_template translate="label">
+                <label>Frontend Template</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <list translate="label">
+                        <value>em_ajaxproducts/list_products.phtml</value>
+                        <label>List ajax products</label>
+                    </list>
+					<grid translate="label">
+                        <value>em_ajaxproducts/grid_products.phtml</value>
+                        <label>Grid ajax products</label>
+                    </grid>
+					<cust translate="label">
+                        <value>custom_template</value>
+                        <label>Display as custom template ...</label>
+                    </cust>
+                </values>
+            </choose_template>
+
+			<custom_theme>
+				<label>Custom template :</label>
+				<description>Effect only when selecting "Display as custom template. By default, using 'em_ajaxproducts/template_custom.phtml'"</description>
+				<visible>1</visible>
+				<type>text</type>
+				<value></value>
+			</custom_theme>
+
+			<cache_lifetime>
+				<label>Cache Lifetime (Seconds)</label>
+				<description>7200 seconds by default, if not set. To refresh instantly, Clear the Blocks HTML Output Cache.</description>
+				<visible>1</visible>
+				<type>text</type>
+				<value></value>
+			</cache_lifetime>
+
+        </parameters>
+    </ajaxproducts_list>
+</widgets>
